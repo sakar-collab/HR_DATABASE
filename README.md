@@ -15,15 +15,12 @@ This project contains a sample Human Resources (HR) database built using SQL. It
 
 The project is useful for beginners learning SQL and relational database concepts.
 
----
 
 # Database Structure
 
 The database created in this project is called:
 
-```
 CREATE DATABASE HR;
-```
 
 ## Tables Included
 
@@ -49,7 +46,6 @@ The project includes SQL scripts for creating relational database tables with:
 
 Example:
 
-```
 CREATE TABLE EMPLOYEES (
     EMP_ID CHAR(9) NOT NULL,
     F_NAME VARCHAR(15) NOT NULL,
@@ -58,9 +54,6 @@ CREATE TABLE EMPLOYEES (
     DEP_ID CHAR(9) NOT NULL,
     PRIMARY KEY (EMP_ID)
 );
-```
-
----
 
 # SQL Concepts Covered
 
@@ -74,13 +67,10 @@ Using:
 
 Example:
 
-```
 SELECT *
 FROM EMPLOYEES
 WHERE ADDRESS LIKE "%Elgin,IL%";
 ```
-
----
 
 ## 2. Sorting Results
 
@@ -90,13 +80,9 @@ Using:
 
 Example:
 
-```
 SELECT *
 FROM EMPLOYEES
 ORDER BY DEP_ID DESC;
-```
-
----
 
 ## 3. Aggregate Functions
 
@@ -109,15 +95,12 @@ Using:
 
 Example:
 
-```
 SELECT DEP_ID,
        COUNT(EMP_ID) AS NUMBER_OF_EMPLOYEES,
        AVG(SALARY) AS AVG_SALARY
 FROM EMPLOYEES
 GROUP BY DEP_ID;
-```
 
----
 
 ## 4. Subqueries
 
@@ -129,16 +112,12 @@ Examples include:
 
 Example:
 
-```
 SELECT *
 FROM EMPLOYEES
 WHERE SALARY < (
     SELECT AVG(SALARY)
     FROM EMPLOYEES
 );
-```
-
----
 
 ## 5. Joins
 
@@ -150,16 +129,12 @@ The project demonstrates:
 
 Example:
 
-```
 SELECT E.F_NAME,
        E.L_NAME,
        JH.START_DATE
 FROM EMPLOYEES AS E
 INNER JOIN JOB_HISTORY AS JH
 ON E.EMP_ID = JH.EMPL_ID;
-```
-
----
 
 # How to Run
 
@@ -169,16 +144,12 @@ ON E.EMP_ID = JH.EMPL_ID;
   or
 * Any SQL database system that supports MySQL syntax
 
----
-
 ## Steps
 
 1. Open your SQL editor
 2. Copy the SQL script
 3. Run the script
 4. Execute the example queries
-
----
 
 # Learning Outcomes
 
@@ -190,18 +161,14 @@ By working through this project, you will learn:
 * Data filtering and aggregation
 * Basic database management
 
----
 
 # Project Purpose
 
 This project was created for SQL practice and learning database fundamentals. It can also be used as:
 
 * A beginner SQL portfolio project
-* A university assignment reference
 * SQL interview preparation
 * Practice for data analyst or business analyst roles
-
----
 
 # Author
 
